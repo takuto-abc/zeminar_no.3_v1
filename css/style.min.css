@@ -1,0 +1,339 @@
+/* section */
+
+/* メインエリアのスタイル */
+.content {
+    padding: 20px 0;
+}
+
+.background-video {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+
+
+.content__head {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.content__title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #b80000; /* 赤い下線 */
+    padding-bottom: 10px;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* カードグループのスタイル */
+.card__grp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+/* カードのスタイル */
+.card__item {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.card__item__link {
+    display: block;
+    color: #f0f0f0;
+    text-decoration: none;
+}
+
+.card__item__fig {
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 アスペクト比 */
+    background-color: #f0f0f0;
+    position: relative;
+    overflow: hidden;
+}
+
+.card__item__fig img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card__item__labels {
+    padding: 15px;
+}
+
+.card__item__title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #292929;
+    margin-left: 20px;
+}
+
+.card__item__subtitle {
+    font-size: 14px;
+    color: #292929;
+    line-height: 1.4;
+    margin-left: 20px;
+}
+
+/* section */
+
+/* 全体の背景とテキストカラー設定 */
+body {
+    background-color: black; /* 暗い背景色 */
+    color: #f0f0f0; /* 明るい文字色 */
+    font-family: 'Arial', sans-serif;
+}
+
+/* メインエリアのスタイル */
+.mainarea {
+    padding: 20px;
+    background-color: #ffffff; /* 背景色を暗く設定 */
+}
+
+
+.ttl {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff; 
+    text-align: center;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #b80000; 
+    padding-bottom: 10px;
+}
+
+.textwidget {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #dcdcdc; 
+    text-align: left;
+}
+
+.textwidget {
+    line-height: 1.7;
+    font-size: 1rem;
+    color: #666;
+}
+
+.textwidget p {
+    margin-bottom: 20px;
+}
+
+.textwidget strong {
+    color: #666; /* 強調された文字を白色に */
+}
+
+
+.textwidget a {
+    color: #b80000;
+    text-decoration: none;
+}
+
+.textwidget a:hover {
+    text-decoration: underline; /* ホバー時に下線を表示 */
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.widget {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+}
+
+.ttl {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+.image-slider {
+    display: flex;
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* スライド */
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 画像の縦横比を保ちながら、可能な限りスライドを埋める */
+}
+
+.swiper {
+    width: 600px;
+    height: 400px;
+}
+
+footer {
+    background-color: #f8f8f8;
+    padding: 10px 0;
+}
+
+#MS5e5fa6f46960c {
+    display: flex;
+    overflow-x: scroll; /* 横スクロールを許可 */
+    scroll-snap-type: x mandatory; /* スクロールスナップを有効化 */
+}
+
+.ms-slide {
+    flex: 0 0 auto; /* 画像を並べるためにフレックスアイテムとして設定 */
+    scroll-snap-align: start; /* 各画像がスクロールの開始位置に揃うように設定 */
+    width: 100%; /* 画像をスライダーの幅に合わせる */
+    box-sizing: border-box; /* パディングやボーダーを含めて幅を計算 */
+}
+
+
+.ms-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 親要素を中央揃え */
+.textwidget {
+    text-align: center;
+}
+
+/* スライダーコンテナをインラインブロックに設定 */
+.master-slider-parent {
+    display: inline-block;
+}
+
+
+@media only screen and (max-width: 767px) {
+    .wrapper {
+        padding-right: 10px;
+        padding-left: 10px
+    }
+    .card__grp {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        padding: 0
+    }
+
+    .card__grp--mlist {
+        display: block;
+        padding: 0;
+        border-top: 1px solid #ddd
+    }
+
+
+    .card__grp--mlist .card__item {
+        width: 100%;
+        margin: 0;
+        border-bottom: 1px solid #ddd;
+        padding: 0
+    }
+
+    .card__grp--mlist .card__item__link {
+        display: -ms-flexbox;
+        display: flex;
+        box-sizing: border-box;
+        padding: 10px 5px
+    }
+
+    .card__grp--mlist .card__item__fig {
+        position: relative;
+        height: auto;
+        -ms-flex-preferred-size: 100px;
+        flex-basis: 100px
+    }
+
+    .card__item__fig--chart {
+        overflow: visible;
+        width: 100px;
+        height: 100px
+    }
+
+    .card__item__fig--chart canvas {
+        width: 100px;
+        height: 100px;
+        transform: scale(1)
+    }
+
+    .card__grp--mlist .card__item__fig img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0
+    }
+
+    .card__item__labels {
+        padding: 8px 0
+    }
+
+    .card__grp--mlist .card__item__labels {
+        padding: 4px 0 0 10px;
+        box-sizing: border-box
+    }
+
+    .card__grp--mlist .card__item__labels,.card__item__labels--subject {
+        -ms-flex-preferred-size: calc(100% - 100px);
+        flex-basis: calc(100% - 100px)
+    }
+
+    .card__item__title {
+        font-size: 12px;
+        font-size: 1.2rem;
+        margin-left: 20px;
+    }
+
+    .card__grp--mlist .card__item__title {
+        font-size: 14px;
+        font-size: 1.4rem;
+        margin: 0 0 5px
+    }
+
+    .card__item__date {
+        padding: 0 0 5px;
+        font-size: 10px;
+        font-size: 1rem
+    }
+
+    .card__item__subtitle {
+        padding: 0 0 5px;
+        font-size: 10px;
+        font-size: 1rem
+    }
+
+    .card__grp {
+        flex-direction: column;
+    }
+    
+    .card__item {
+        width: 80%;
+        margin: 20px auto;
+    }
+
+}
+
