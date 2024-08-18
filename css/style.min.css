@@ -1,9 +1,9 @@
 /* section */
 
 /* メインエリアのスタイル */
-.content {
+/* .content {
     padding: 20px 0;
-}
+} */
 
 .background-video {
     position: absolute;
@@ -193,11 +193,6 @@ body {
     height: 400px;
 }
 
-footer {
-    background-color: #f8f8f8;
-    padding: 10px 0;
-}
-
 #MS5e5fa6f46960c {
     display: flex;
     overflow-x: scroll; /* 横スクロールを許可 */
@@ -334,7 +329,7 @@ footer {
         width: 80%;
         margin: 20px auto;
     }
-    
+
     .swiper-slide {
         display: flex;
         justify-content: center;
@@ -345,21 +340,22 @@ footer {
         width: 80%; /* 画像の幅を画面サイズの80%に設定 */
         height: auto; /* 高さは自動調整 */
         object-fit: contain; /* 画像全体が表示されるように */
-    }
-}
-
-/* スマートフォン向けのスタイル */
-@media (max-width: 480px) {
-    .swiper-slide {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        margin-left: 40px;
     }
 
-    .swiper-slide img {
-        width: 80%; /* 画像の幅を画面サイズの80%に設定 */
-        height: auto; /* 高さは自動調整 */
-        object-fit: contain; /* 縦横比を保ちながら、画像全体が表示されるように */
+    /* Navigation arrows を非表示にする */
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+
+    /* Pagination を中央に配置する */
+    .swiper-pagination {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10px; /* 必要に応じて調整 */
+        width: auto; /* 必要に応じて調整 */
     }
 }
 

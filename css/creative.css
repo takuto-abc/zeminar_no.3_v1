@@ -172,20 +172,39 @@
      }
  }
  
- header {
-     position: relative;
-     width: 100%;
-     min-height: auto;
-     text-align: center;
-     color: #fff;
-     background-image: url(../img/header.jpg);
-     background-position: center;
-     -webkit-background-size: cover;
-     -moz-background-size: cover;
-     background-size: cover;
-     -o-background-size: cover;
- }
- 
+/* Header */
+header {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    text-align: center;
+    color: #fff;
+    background-image: url(../img/header.jpg);
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+/* Content */
+.content {
+    width: 100%;
+    box-sizing: border-box; /* パディングやボーダーを含めて幅を計算する */
+    margin: 0;
+    padding: 0; /* 必要に応じて調整 */
+}
+
+/* Footer */
+.bg-light {
+    width: 100%;
+    box-sizing: border-box; /* パディングやボーダーを含めて幅を計算する */
+    margin: 0;
+    padding: 3rem; /* 既存の設定に基づいて調整 */
+    text-align: center;
+    background-color: #f8f9fa; /* 背景色は既存のクラス設定に基づいて調整 */
+}
+
  header .header-content {
      position: relative;
      z-index: 1;
@@ -212,6 +231,27 @@
      color: rgba(255,255,255,.7);
  }
  
+    /* スマートフォン表示用のメディアクエリ */
+@media (max-width: 767px) {
+    header {
+        min-height: 200px; /* 必要に応じて高さを調整 */
+        background-position: center;
+        background-size: cover;
+    }
+
+    .content {
+        padding: 15px; /* スマホ向けにパディングを調整 */
+    }
+
+    .bg-light {
+        padding: 1.5rem; /* スマホ向けにフッターのパディングを調整 */
+    }
+}
+
+
+
+
+
  @media(min-width:768px) {
      header {
          min-height: 100%;
