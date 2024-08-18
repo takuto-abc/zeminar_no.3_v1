@@ -334,6 +334,34 @@ footer {
         width: 80%;
         margin: 20px auto;
     }
+    
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
+    .swiper-slide img {
+        width: 80%; /* 画像の幅を画面サイズの80%に設定 */
+        height: auto; /* 高さは自動調整 */
+        object-fit: contain; /* 画像全体が表示されるように */
+    }
 }
+
+/* スマートフォン向けのスタイル */
+@media (max-width: 480px) {
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .swiper-slide img {
+        width: 80%; /* 画像の幅を画面サイズの80%に設定 */
+        height: auto; /* 高さは自動調整 */
+        object-fit: contain; /* 縦横比を保ちながら、画像全体が表示されるように */
+    }
+}
+
+    
 
