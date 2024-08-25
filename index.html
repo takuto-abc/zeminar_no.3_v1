@@ -25,7 +25,7 @@
 
     <!-- Plugin CSS -->
     <link rel="stylesheet" href="css/animate.min.css" type="text/css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css">
 
 
     <!-- Custom CSS -->
@@ -123,47 +123,36 @@
             </div>
         </div>
         <!-- Slider main container -->
-        <div class="swiper">
-            <!-- Additional required wrapper -->
+        <div class="swiper-container">
+            <!-- メイン表示部分 -->
             <div class="swiper-wrapper">
-            <!-- Slides -->
+                <!-- 各スライド -->
                 <div class="swiper-slide">
-                    <img src="img/IMG_7419.jpg" alt="Slide 1 Image">
+                    <div class="swiper__box">
+                        <img src="img/IMG_7416.jpg">
+                    </div>
+                    <!-- </div> -->
                 </div>
-                
                 <div class="swiper-slide">
-                    <img src="img/IMG_7415.jpg" alt="Slide 2 Image">
+                    <div class="swiper__box">
+                        <img src="img/IMG_7415.jpg">
+                    </div>
+                    <!-- </div> -->
                 </div>
-                        
                 <div class="swiper-slide">
-                    <img src="img/IMG_7414.jpg" alt="Slide 4 Image">
-                </div>
-
-                <div class="swiper-slide">
-                    <img src="img/IMG_7420.jpg" alt="Slide 5 Image">
-                </div>
-
-                <div class="swiper-slide">
-                    <img src="img/IMG_7421.jpg" alt="Slide 6 Image">
-                </div>
-
-                <div class="swiper-slide">
-                    <img src="img/IMG_7417.jpg" alt="Slide 7 Image">
+                    <div class="swiper__box">
+                        <img src="img/IMG_7419.JPG">
+                    </div>
+                    <!-- </div> -->
                 </div>
             </div>
- 
-            <div class="swiper-pagination" style="--swiper-pagination-color: #b80000;"></div>
-        
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev" style="color: white;"></div>
-            <div class="swiper-button-next" style="color: white;"></div>
-
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        </div>
+        <!-- Swiper END -->
         </div>
     </section>
-    
-
-
-
     <section class="content">
         <div class="content__head">
             <div class="ttl" style="font-size: 24px;">田口ゼミについて</div>			
@@ -254,33 +243,44 @@
     </footer>
 
     <script type="module">
-        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
-      
-        const swiper = new Swiper('.swiper', {
-            // Optional parameters
-            direction: 'horizontal', // 横スクロール
-            loop: true,
-    
-            // Autoplay設定
-            autoplay: {
-                delay: 3000, // 3秒ごとに次のスライドに移動
-                disableOnInteraction: false, // ユーザー操作後も自動再生を続ける
-            },
-    
-            speed: 1000, // 2秒かけて次のスライドへ移動
+/*====================================================================
+# Swiper
+====================================================================*/
+$(function(){
+    var mySwiper = new Swiper('.swiper-container', {
+        spaceBetween: 0,
+        slidesPerView: 2,
+        loop: true,
+        loopAdditionalSlides: 1,
+        centeredSlides: true,
+        speed: 3000, 
 
-            // If we need pagination
-            pagination: {
-                el: '.swiper-pagination',
-            },
-    
-            // Navigation arrows
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });    
+        autoplay: {
+        delay: 5000,
+        disableOnInteraction: false, // ユーザー操作後も自動再生を続ける
+        },
+
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        },
+
+        breakpoints: {
+                991: {
+                    slidesPerView: 1,
+                    spaceBetween: 0
+                },
+                767: {
+                    slidesPerView: 1,
+                    spaceBetween: 0
+                }
+            }
+    });
+});
     </script>
+    
+    
+    
 
 
 
@@ -309,7 +309,7 @@
 
     <!-- MasterSlider JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masterslider/3.4.0/masterslider.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
